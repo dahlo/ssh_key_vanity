@@ -6,7 +6,7 @@ This script will generate ssh keys until it finds one that matches the word/patt
 len   time
 1     0.8s
 2       3s
-3     XXXs
+3     300s
 4    XXXXs
 ```
 
