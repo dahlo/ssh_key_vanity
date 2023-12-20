@@ -1,16 +1,16 @@
 # Vanity SSH Key Generator
 
-This script will generate ssh keys until it finds one that matches the word/pattern you are looking for. It will take exponentially longer time the longer word you are looking for. A quick test on my own computer showed this time increase when generating about 50 keys per second:
+This script will generate ssh keys until it finds one that matches the word/pattern you are looking for. It will take exponentially longer time the longer word you are looking for, and even longer time if you have constraints that the key should start/end with the word. A quick test on my own computer showed this time increase when generating about 50 keys per second and requiring the key to end with the word:
 
 ```
 len   time
-1     0.5s
-2     0.5s
-3       2s
-4     115s
+1     0.8s
+2       3s
+3     XXXs
+4    XXXXs
 ```
 
-I think upto 5 characters is feasable for a normal computer.
+I think upto 3-4 characters is feasable for a normal computer.
 
 Run as this:
 
