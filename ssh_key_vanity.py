@@ -70,6 +70,7 @@ class KeyGenThread(threading.Thread):
 
 def main():
     parser = argparse.ArgumentParser(description='Generate SSH key with a specific word at the beginning/end of the public key.',
+                                     formatter_class=argparse.RawTextHelpFormatter,
                                      epilog="""Using a wordlist will force the words to be either in the beginning or the end of the public key. In the front is probably a bad idea since most keys start with "AAA.."
 
 Using '--regex' will add a regex that will be matched together with the words from the wordlist (if one was provided), and it can be written as any python compatible regex.
