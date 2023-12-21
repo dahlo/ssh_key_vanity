@@ -52,3 +52,13 @@ python3 ssh_key_vanity.py -r "(dahlo|github)$" -c
 # running infinitly and find any word from the BIP 39 word list or matching a specified regex (case-insensitive) and save the keys in a folder called 'passphrase' and protect the private keys with the password 'hunter2'
 python3 ssh_key_vanity.py -w bip39.txt -r "(dahlo|github)$" -i -o passphrase/ -p hunter2
 """
+
+To run it on multiple threads, just start multiple instances of the script:
+
+```bash
+# start 8 instances 
+for i in {1..8}; do python3 ssh_key_vanity.py -w bip39.txt -r "(dahlo|github)$" -i -o passphrase/ -p hunter2 & done
+
+# kill all background jobs
+kill $(jobs -p)
+```
